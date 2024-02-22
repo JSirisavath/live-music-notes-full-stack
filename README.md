@@ -6,7 +6,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### `npm start`
+2 terminals - 1 for front end and 1 for backend ports
+
+Api calls directs to localhot::5001.
+
+### `npm start` Front-end react dev server
+
+### `run 'nodemon server.js' to run local host server, which will run on 5001 for dev mode.
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
