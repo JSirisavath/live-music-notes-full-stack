@@ -1,7 +1,8 @@
 // import the service from the Service folder
 import AppApiService from '../Service/index';
 
-const TestingComponent = (props) => {
+// Destructure props when receiving props
+const TestingComponent = ({ buttonText, buttonClassNameTailwindCSS }) => {
   // A function for calling an example API service
   const exampleServiceFunction = () => {
     // call the service from Index.js
@@ -16,12 +17,13 @@ const TestingComponent = (props) => {
     <div>
       {/* Add Button OnClick and then pass in the function to fetch the route you made in endpoint.js */}
       {/* Tailwind is not working here, but I looked up how to use tailwinds in components but you would do so here.  */}
+      {/* Use the passed in props from Testing page here*/}
       <button
         onClick={exampleServiceFunction}
-        className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 mt-4 rounded"
+        className={buttonClassNameTailwindCSS}
       >
-        {/* Props, will recieve button text here*/}
-        {props.buttonText}
+        {/* Props, will receive button text here*/}
+        {buttonText}
       </button>
     </div>
   );
