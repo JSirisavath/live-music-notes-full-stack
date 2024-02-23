@@ -1,19 +1,25 @@
-import "./App.css";
-// import the service from the Service folder
-import AppApiService from "./Service/index.js";
+import './App.css';
+
+// Routing libraries to route to pages based on URL:
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+// Import testing page from src/pages folder
+import TestingPage from './pages/TestingPage';
+
+import MainPageBanner from './pages/MainPageBanner';
 
 function App() {
-  // call the service
-  const service = AppApiService();
-
-  // call the serverTest function from the service
-  service.serverTest().then((response) => {
-    console.log(response);
-  });
-
   return (
     <div className="App">
-      <h1>START OF A GREAT PROJECT!</h1>
+      <BrowserRouter>
+        <Routes>
+          {/* Main page,  pass in a page component */}
+          <Route path="/" element={<MainPageBanner />} />
+
+          {/* Testing page component redirect*/}
+          <Route path="/test" element={<TestingPage />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
