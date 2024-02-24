@@ -1,13 +1,25 @@
 import './assets/css/index.css';
 
+// Routing libraries to route to pages based on URL:
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+// Import testing page from src/pages folder
+import TestingPage from './pages/TestingPage';
+
+import MainPageBanner from './pages/MainPageBanner';
+
 function App() {
   return (
     <div className="App">
-      <div className="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4">
-        <h1 className="bg-blue-500 text-white p-4">
-          START OF A GREAT PROJECT! Testing Tailwind CSS!
-        </h1>
-      </div>
+      <BrowserRouter>
+        <Routes>
+          {/* Main page,  pass in a page component */}
+          <Route path="/" element={<MainPageBanner />} />
+
+          {/* Testing page component redirect*/}
+          <Route path="/test" element={<TestingPage />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

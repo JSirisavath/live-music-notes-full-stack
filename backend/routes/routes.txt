@@ -1,2 +1,0 @@
-Call API endpoints and any other routings necessary for app. 
-Development: API Calls Points to server localhost 5001. But added proxy to make request from front end to make it easier.
