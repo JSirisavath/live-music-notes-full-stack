@@ -1,4 +1,4 @@
-import './App.css';
+import './assets/css/index.css';
 
 // Routing libraries to route to pages based on URL:
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
