@@ -1,8 +1,4 @@
-// import './App.css';
-import './index.css';
-
-// Uncomment this to see tailwind styles working on browser.
-// import './output.css';
+import './assets/css/index.css';
 
 function App() {
   return (
