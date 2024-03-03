@@ -1,1 +1,0 @@
-Control data transfer/transmission between models and view. Interaction to database.
